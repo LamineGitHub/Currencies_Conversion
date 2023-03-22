@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  :root {
+    --primary: #01bc63;
+    --primary-hover: #01bc622d;
+  }
+}
+
+@layer base {
+  body {
+    font-family: "Poppins", sans-serif;
+    /* background: url("../img/gradient7.jpg") no-repeat; */
+    /* background: url("../img/gradient13.jpg") no-repeat; */
+    /* background: url("../img/gradient14.jpg") no-repeat; */
+    /* background: url("../img/gradient_11.jpg") no-repeat; */
+    /* background: url("../img/gradient_22.jpg") no-repeat; */
+    /* background: url("../img/gradient_44.jpg") no-repeat; */
+    /* background-size: cover; */
+  }
+
+  img {
+    display: inline;
+  }
+
+  #ecran {
+    height: 100px;
+    width: 280px;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    /* font-size: 26px; */
+  }
+    #calculator {
+    height: 500px;
+  }
+}
+
+.btn-signe {
+  @apply text-primary font-semibold;
+}
+
+.btn-ring {
+  @apply focus:outline-none focus:ring-1 focus:ring-primary focus:ring-offset-2 focus:ring-opacity-50 rounded-full hover:bg-primaryHover duration-200;
+}

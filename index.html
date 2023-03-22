@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./img/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="dist/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Currency Conversion Calculator</title>
+  </head>
+  <body class="flex justify-center bg-slate-300 items-center h-[100vh]">
+    <main class="flex">
+      <section id="calculator" class="bg-white rounded-lg">
+        <div class="px-2">
+          <div class="inline cursor-pointer">
+            <img src="./img/leftArrow.svg" width="20px" alt="" />
+          </div>
+          <div id="ecran" class="pt-8 text-2xl text-right border-none"></div>
+        </div>
+
+        <div
+          id="button"
+          class="pl-2 pr-4 pt-4 bg-white mt-16 border-t-2 rounded-lg rounded-tl-xl rounded-tr-xl"
+        >
+          <div class="grid grid-cols-4 select-none gap-8 text-xl">
+            <button class="btn-signe btn-ring">C</button>
+            <button class="btn-signe btn-ring">/</button>
+            <button class="btn-signe btn-ring">*</button>
+            <button class="btn-signe btn-ring">DEL</button>
+            <button class="btn-ring">7</button>
+            <button class="btn-ring">8</button>
+            <button class="btn-ring">9</button>
+            <button class="btn-signe btn-ring">-</button>
+            <button class="btn-ring">4</button>
+            <button class="btn-ring">5</button>
+            <button class="btn-ring">6</button>
+            <button class="btn-signe btn-ring">+</button>
+            <button class="btn-ring">1</button>
+            <button class="btn-ring">2</button>
+            <button class="btn-ring">3</button>
+            <button
+              class="row-span-2 text-white rounded-lg bg-primary focus:outline-none focus:ring focus:ring-green-500 focus:ring-offset-0 focus:ring-opacity-50"
+            >
+              =
+            </button>
+            <button class="btn-ring">.</button>
+            <button class="btn-ring">0</button>
+            <button class="btn-ring">00</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/calculator.js"></script>
+  </body>
+</html>
