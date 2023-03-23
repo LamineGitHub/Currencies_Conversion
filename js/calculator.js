@@ -1,4 +1,4 @@
-const screen = document.getElementById("ecran")
+const screen = document.getElementById("ecran1")
 const button = document.querySelectorAll("#calculator button")
 
 /* Ajout d'un écouteur d'événement au document pour chaque touche pressé. */

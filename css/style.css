@@ -25,30 +25,22 @@
     display: inline;
   }
 
-  #ecran {
-    height: 100px;
-    width: 280px;
+  #ecran1 {
     word-wrap: break-word;
     word-break: break-all;
-    overflow: hidden;
     /* font-size: 26px; */
   }
 
-  #calculator {
-    height: 500px;
+  .calcBoxShadow {
+    box-shadow: -10px 5px 34px -4px rgba(0, 0, 0, 0.336);
   }
 
   #ecran2 {
     height: 200px;
-    width: 280px;
     word-wrap: break-word;
     word-break: break-all;
     overflow: hidden;
     /* font-size: 26px; */
-  }
-
-  #convert {
-    height: 550px;
   }
 }
 

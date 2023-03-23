@@ -1,91 +1,106 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="img/icon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="dist/style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>Currency Conversion Calculator</title>
-  </head>
-  <body class="flex justify-center bg-slate-300 items-center h-[100vh]">
-    <main class="">
-      <section id="convert" class="bg-white rounded-lg">
-        <div class="px-2 text-right pt-2">
-          <div class="inline cursor-pointer">
-            <img src="./img/calculator.svg" width="25px" alt="" />
-          </div>
-          <div id="ecran2" class="pt-8 text-2xl text-right border-none"></div>
-        </div>
+</head>
 
-        <div
-          id="buttonConvert"
-          class="px-4 pt-4 bg-white mt-16 border-t-2 rounded-lg rounded-tl-xl rounded-tr-xl"
-        >
-          <div class="grid grid-cols-4 select-none gap-8 text-xl">
-            <button class="btn-ring">7</button>
-            <button class="btn-ring">8</button>
-            <button class="btn-ring">9</button>
-            <button class="btn-signe btn-ring row-span-2">DEL</button>
-            <button class="btn-ring">4</button>
-            <button class="btn-ring">5</button>
-            <button class="btn-ring">6</button>
-            <button class="btn-ring">1</button>
-            <button class="btn-ring">2</button>
-            <button class="btn-ring">3</button>
-            <button class="btn-signe btn-ring row-span-2">C</button>
-            <button class="btn-ring">.</button>
-            <button class="btn-ring">0</button>
-            <button class="btn-ring">00</button>
-          </div>
-        </div>
-      </section>
-      <!-- <section id="calculator" class="bg-white rounded-lg">
-        <div class="px-2">
-          <div class="inline cursor-pointer">
-            <img src="./img/leftArrow.svg" width="20px" alt="" />
-          </div>
-          <div id="ecran" class="pt-8 text-2xl text-right border-none"></div>
-        </div>
+<body class="flex justify-center bg-slate-300 items-center h-[100vh]">
 
-        <div
-          id="button"
-          class="pl-2 pr-4 pt-4 bg-white mt-16 border-t-2 rounded-lg rounded-tl-xl rounded-tr-xl"
-        >
-          <div class="grid grid-cols-4 select-none gap-8 text-xl">
-            <button class="btn-signe btn-ring">C</button>
-            <button class="btn-signe btn-ring">/</button>
-            <button class="btn-signe btn-ring">*</button>
-            <button class="btn-signe btn-ring">DEL</button>
-            <button class="btn-ring">7</button>
-            <button class="btn-ring">8</button>
-            <button class="btn-ring">9</button>
-            <button class="btn-signe btn-ring">-</button>
-            <button class="btn-ring">4</button>
-            <button class="btn-ring">5</button>
-            <button class="btn-ring">6</button>
-            <button class="btn-signe btn-ring">+</button>
-            <button class="btn-ring">1</button>
-            <button class="btn-ring">2</button>
-            <button class="btn-ring">3</button>
-            <button
-              class="row-span-2 text-white rounded-lg bg-primary focus:outline-none focus:ring focus:ring-green-500 focus:ring-offset-0 focus:ring-opacity-50"
-            >
-              =
-            </button>
-            <button class="btn-ring">.</button>
-            <button class="btn-ring">0</button>
-            <button class="btn-ring">00</button>
-          </div>
-        </div>
-      </section> -->
+    <main class="flex w-[297px] overflow-hidden rounded-lg shadow-2xl">
+
+        <!-- Beginning of the converter -->
+        <section class="fixed overflow-hidden rounded-lg">
+
+            <div id="convert" class="bg-white h-[550px] rounded-lg ease-out duration-1000">
+
+                <div class="px-2 text-right select-none pt-2">
+                    <div id="iconCalculator" class="inline cursor-pointer">
+                        <img src="./img/calculator.svg" width="25px" alt="" />
+                    </div>
+                    <div id="ecran2" class="pt-8 text-2xl text-right border-none w-[280px]"></div>
+                </div>
+
+                <div id="buttonConvert"
+                    class="px-4 pt-4 bg-white mt-16 border-t-2 rounded-lg rounded-tl-xl rounded-tr-xl">
+
+                    <div class="grid grid-cols-4 select-none gap-8 text-xl">
+                        <button class="btn-ring">7</button>
+                        <button class="btn-ring">8</button>
+                        <button class="btn-ring">9</button>
+                        <button class="btn-signe btn-ring row-span-2">DEL</button>
+                        <button class="btn-ring">4</button>
+                        <button class="btn-ring">5</button>
+                        <button class="btn-ring">6</button>
+                        <button class="btn-ring">1</button>
+                        <button class="btn-ring">2</button>
+                        <button class="btn-ring">3</button>
+                        <button class="btn-signe btn-ring row-span-2">C</button>
+                        <button class="btn-ring">.</button>
+                        <button class="btn-ring">0</button>
+                        <button class="btn-ring">00</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- End of the converter -->
+        <section id="calculator"
+            class="bg-white h-[550px] relative border top-0 right-[-100%] ease-in duration-500 rounded-lg">
+            <!-- class="bg-white h-[550px] relative border top-0 right-0 ease-in duration-500 rounded-lg"> -->
+
+            <div class="px-2 pt-2">
+                <div id="iconBack" class="inline select-none cursor-pointer">
+                    <img src="./img/leftArrow.svg" width="20px" alt="" />
+                </div>
+                <div id="ecran1" class="pt-16 text-3xl text-right overflow-hidden w-[280px] h-[140px] border-none">
+                </div>
+            </div>
+
+            <div id="button" class="pl-2 pr-4 pt-5 bg-white mt-16 border-t-2 rounded-lg rounded-tl-xl rounded-tr-xl">
+
+                <div class="grid grid-cols-4 select-none gap-8 text-xl">
+                    <button class="btn-signe btn-ring">C</button>
+                    <button class="btn-signe btn-ring">/</button>
+                    <button class="btn-signe btn-ring">*</button>
+                    <button class="btn-signe btn-ring">DEL</button>
+                    <button class="btn-ring">7</button>
+                    <button class="btn-ring">8</button>
+                    <button class="btn-ring">9</button>
+                    <button class="btn-signe btn-ring">-</button>
+                    <button class="btn-ring">4</button>
+                    <button class="btn-ring">5</button>
+                    <button class="btn-ring">6</button>
+                    <button class="btn-signe btn-ring">+</button>
+                    <button class="btn-ring">1</button>
+                    <button class="btn-ring">2</button>
+                    <button class="btn-ring">3</button>
+                    <button
+                        class="row-span-2 text-white rounded-lg bg-primary focus:outline-none focus:ring focus:ring-green-500 focus:ring-offset-0 focus:ring-opacity-50">
+                        =
+                    </button>
+                    <button class="btn-ring">.</button>
+                    <button class="btn-ring">0</button>
+                    <button class="btn-ring">00</button>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- End of the calculator -->
     </main>
-    <!-- <script src="js/calculator.js"></script> -->
-    <script src="js/convert.js"></script>
-  </body>
+    <script src="js/calculator.js"></script>
+    <!-- <script src="js/convert.js"></script> -->
+    <script src="js/parallaxEffect.js"></script>
+</body>
+
 </html>
