@@ -33,8 +33,22 @@
     overflow: hidden;
     /* font-size: 26px; */
   }
-    #calculator {
+
+  #calculator {
     height: 500px;
+  }
+
+  #ecran2 {
+    height: 200px;
+    width: 280px;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    /* font-size: 26px; */
+  }
+
+  #convert {
+    height: 550px;
   }
 }
 

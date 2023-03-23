@@ -14,8 +14,38 @@
     <title>Currency Conversion Calculator</title>
   </head>
   <body class="flex justify-center bg-slate-300 items-center h-[100vh]">
-    <main class="flex">
-      <section id="calculator" class="bg-white rounded-lg">
+    <main class="">
+      <section id="convert" class="bg-white rounded-lg">
+        <div class="px-2 text-right pt-2">
+          <div class="inline cursor-pointer">
+            <img src="./img/calculator.svg" width="25px" alt="" />
+          </div>
+          <div id="ecran2" class="pt-8 text-2xl text-right border-none"></div>
+        </div>
+
+        <div
+          id="buttonConvert"
+          class="px-4 pt-4 bg-white mt-16 border-t-2 rounded-lg rounded-tl-xl rounded-tr-xl"
+        >
+          <div class="grid grid-cols-4 select-none gap-8 text-xl">
+            <button class="btn-ring">7</button>
+            <button class="btn-ring">8</button>
+            <button class="btn-ring">9</button>
+            <button class="btn-signe btn-ring row-span-2">DEL</button>
+            <button class="btn-ring">4</button>
+            <button class="btn-ring">5</button>
+            <button class="btn-ring">6</button>
+            <button class="btn-ring">1</button>
+            <button class="btn-ring">2</button>
+            <button class="btn-ring">3</button>
+            <button class="btn-signe btn-ring row-span-2">C</button>
+            <button class="btn-ring">.</button>
+            <button class="btn-ring">0</button>
+            <button class="btn-ring">00</button>
+          </div>
+        </div>
+      </section>
+      <!-- <section id="calculator" class="bg-white rounded-lg">
         <div class="px-2">
           <div class="inline cursor-pointer">
             <img src="./img/leftArrow.svg" width="20px" alt="" />
@@ -53,8 +83,9 @@
             <button class="btn-ring">00</button>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
-    <script src="js/calculator.js"></script>
+    <!-- <script src="js/calculator.js"></script> -->
+    <script src="js/convert.js"></script>
   </body>
 </html>
