@@ -36,18 +36,22 @@
   }
 
   #ecran2 {
-    height: 200px;
+    height: 210px;
     word-wrap: break-word;
     word-break: break-all;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* font-size: 26px; */
   }
 }
 
 .btn-signe {
-  @apply text-primary font-semibold;
+  @apply font-semibold text-primary;
 }
 
 .btn-ring {
-  @apply focus:outline-none focus:ring-1 focus:ring-primary focus:ring-offset-2 focus:ring-opacity-50 rounded-full hover:bg-primaryHover duration-200;
+  @apply duration-200 rounded-full focus:outline-none focus:ring-1 focus:ring-primary focus:ring-offset-2 focus:ring-opacity-50 hover:bg-primaryHover;
+}
+
+.countrySelectClass {
+  @apply flex items-center justify-between p-1 text-left transition-colors border rounded-md cursor-pointer w-28 hover:border-primary shrink-0;
 }

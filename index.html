@@ -12,37 +12,72 @@
     <title>Currency Conversion Calculator</title>
 </head>
 
-<body class="flex justify-center bg-slate-300 items-center h-[100vh]">
+<body class="flex justify-center items-center bg-slate-300 h-[100vh]">
 
-    <main class="flex w-[297px] overflow-hidden rounded-lg shadow-2xl">
+    <main class="flex w-[315px] overflow-hidden rounded-lg shadow-2xl">
 
         <!-- Beginning of the converter -->
         <section class="fixed overflow-hidden rounded-lg">
 
             <div id="convert" class="bg-white h-[550px] rounded-lg ease-out duration-1000">
 
-                <div class="px-2 text-right select-none pt-2">
+                <div class="px-2 pt-2 text-right select-none">
+
                     <div id="iconCalculator" class="inline cursor-pointer">
                         <img src="./img/calculator.svg" width="25px" alt="" />
                     </div>
-                    <div id="ecran2" class="pt-8 text-2xl text-right border-none w-[280px]"></div>
+
+                    <div id="ecran2" class="pt-12 text-lg text-right border-none w-[299px]">
+
+                        <div class="flex items-center justify-between ">
+
+                            <div id="selectCountry1" class="countrySelectClass">
+                                <img src="https://flagcdn.com/48x36/sn.png" class="mr-1" width="30px" alt="">
+                                <span class="block">XOF</span>
+                                <img src="./img/bottomArrow.svg" width="20px" alt="">
+                            </div>
+
+                            <div class="text-base text-right">
+                                <div>123456789012.12</div>
+                            </div>
+
+                        </div>
+                        <div class="mb-6 text-xs text-slate-500">CFA Franc</div>
+
+
+                        <div class="flex items-center justify-between pt-8 border-t">
+
+                            <div id="selectCountry2" class="countrySelectClass">
+                                <img src="https://flagcdn.com/48x36/us.png" class="mr-1" width="30px" alt="">
+                                <div>USD</div>
+                                <img src="./img/bottomArrow.svg" width="20px" alt="">
+                            </div>
+
+                            <div class="text-base text-right">
+                                <span class="block">255 808 348 910 233.03</span>
+                            </div>
+
+                        </div>
+                        <div class="mb-4 text-xs text-slate-500">Dollar$</div>
+
+                    </div>
                 </div>
 
                 <div id="buttonConvert"
-                    class="px-4 pt-4 bg-white mt-16 border-t-2 rounded-lg rounded-tl-xl rounded-tr-xl">
+                    class="px-4 pt-4 bg-white border-t-2 rounded-lg mt-14 rounded-tl-xl rounded-tr-xl">
 
-                    <div class="grid grid-cols-4 select-none gap-8 text-xl">
+                    <div class="grid grid-cols-4 gap-8 text-xl select-none">
                         <button class="btn-ring">7</button>
                         <button class="btn-ring">8</button>
                         <button class="btn-ring">9</button>
-                        <button class="btn-signe btn-ring row-span-2">DEL</button>
+                        <button class="row-span-2 btn-signe btn-ring">DEL</button>
                         <button class="btn-ring">4</button>
                         <button class="btn-ring">5</button>
                         <button class="btn-ring">6</button>
                         <button class="btn-ring">1</button>
                         <button class="btn-ring">2</button>
                         <button class="btn-ring">3</button>
-                        <button class="btn-signe btn-ring row-span-2">C</button>
+                        <button class="row-span-2 btn-signe btn-ring">C</button>
                         <button class="btn-ring">.</button>
                         <button class="btn-ring">0</button>
                         <button class="btn-ring">00</button>
@@ -54,21 +89,25 @@
         </section>
 
         <!-- End of the converter -->
+
+
+        <!-- Beginning of the calculator -->
+        <!-- class="bg-white h-[550px] relative border top-0 right-0 ease-in duration-500 rounded-lg"> -->
         <section id="calculator"
             class="bg-white h-[550px] relative border top-0 right-[-100%] ease-in duration-500 rounded-lg">
-            <!-- class="bg-white h-[550px] relative border top-0 right-0 ease-in duration-500 rounded-lg"> -->
 
             <div class="px-2 pt-2">
-                <div id="iconBack" class="inline select-none cursor-pointer">
+                <div id="iconBack" class="inline cursor-pointer select-none">
                     <img src="./img/leftArrow.svg" width="20px" alt="" />
                 </div>
-                <div id="ecran1" class="pt-16 text-3xl text-right overflow-hidden w-[280px] h-[140px] border-none">
+
+                <div id="ecran1" class="pt-16 text-3xl text-right overflow-hidden w-[300px] h-[140px] border-none">
                 </div>
             </div>
 
-            <div id="button" class="pl-2 pr-4 pt-5 bg-white mt-16 border-t-2 rounded-lg rounded-tl-xl rounded-tr-xl">
+            <div id="button" class="pt-5 pl-2 pr-4 mt-16 bg-white border-t-2 rounded-lg rounded-tl-xl rounded-tr-xl">
 
-                <div class="grid grid-cols-4 select-none gap-8 text-xl">
+                <div class="grid grid-cols-4 gap-8 text-xl select-none">
                     <button class="btn-signe btn-ring">C</button>
                     <button class="btn-signe btn-ring">/</button>
                     <button class="btn-signe btn-ring">*</button>
