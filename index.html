@@ -16,14 +16,40 @@
 
     <main class="flex w-[315px] overflow-hidden rounded-lg shadow-2xl">
 
+        <!-- Beginning of the listCountry -->
+        <section>
+            <div id="listCountry"
+                class=" bg-white h-[550px] overflow-y-auto overflow-x-hidden z-10 top-0 right-[100%] relative ease-in-out duration-300 rounded-lg">
+
+                <div class="relative group">
+                    <svg class="absolute bottom-[35px] left-[20px] group-focus:stroke-primary group-hover:stroke-primary"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20px">
+                        <path
+                            d="M 20.5 6 C 12.509634 6 6 12.50964 6 20.5 C 6 28.49036 12.509634 35 20.5 35 C 23.956359 35 27.133709 33.779044 29.628906 31.75 L 39.439453 41.560547 A 1.50015 1.50015 0 1 0 41.560547 39.439453 L 31.75 29.628906 C 33.779044 27.133709 35 23.956357 35 20.5 C 35 12.50964 28.490366 6 20.5 6 z M 20.5 9 C 26.869047 9 32 14.130957 32 20.5 C 32 23.602612 30.776198 26.405717 28.791016 28.470703 A 1.50015 1.50015 0 0 0 28.470703 28.791016 C 26.405717 30.776199 23.602614 32 20.5 32 C 14.130953 32 9 26.869043 9 20.5 C 9 14.130957 14.130953 9 20.5 9 z" />
+                    </svg>
+                    <input type="text" id="search"
+                        class="w-11/12 p-2 pl-8 m-2 mb-6 ml-3 text-base transition-colors rounded-lg focus:border-primary focus:ring-0"
+                        placeholder="Search . . ." />
+                </div>
+                <p id="notFoundMsg" class="hidden pl-2 text-lg text-red-600">Country not found !</p>
+
+                <!-- Start of country list -->
+                <div id="country" class="text-base w-[310px]"></div>
+                <!-- End of country list -->
+
+            </div>
+        </section>
+        <!-- End of the listCountry -->
+
+
         <!-- Beginning of the converter -->
         <section class="fixed overflow-hidden rounded-lg">
 
             <div id="convert" class="bg-white h-[550px] rounded-lg ease-out duration-1000">
 
-                <div class="px-2 pt-2 text-right select-none">
+                <div class="px-2 pt-2 text-right">
 
-                    <div id="iconCalculator" class="inline cursor-pointer">
+                    <div id="iconCalculator" class="inline cursor-pointer select-none">
                         <img src="./img/calculator.svg" width="25px" alt="" />
                     </div>
 
@@ -31,9 +57,8 @@
 
                         <div class="flex items-center justify-between ">
 
-                            <div id="selectCountry1" class="countrySelectClass">
-                                <img src="https://flagcdn.com/48x36/sn.png" class="mr-1" width="30px" alt="">
-                                <span class="block">XOF</span>
+                            <div id="selectCountryFrom" class="select-none countrySelectClass">
+                                <div id="codeFrom">USD</div>
                                 <img src="./img/bottomArrow.svg" width="20px" alt="">
                             </div>
 
@@ -42,23 +67,22 @@
                             </div>
 
                         </div>
-                        <div class="mb-6 text-xs text-slate-500">CFA Franc</div>
+                        <div id="unitySelect1" class="mb-6 text-xs text-slate-500">US Dollar$</div>
 
 
                         <div class="flex items-center justify-between pt-8 border-t">
 
-                            <div id="selectCountry2" class="countrySelectClass">
-                                <img src="https://flagcdn.com/48x36/us.png" class="mr-1" width="30px" alt="">
-                                <div>USD</div>
+                            <div id="selectCountryTo" class="select-none countrySelectClass">
+                                <div id="codeTo">XOF</div>
                                 <img src="./img/bottomArrow.svg" width="20px" alt="">
                             </div>
 
                             <div class="text-base text-right">
-                                <span class="block">255 808 348 910 233.03</span>
+                                <div>255 808 348 910 233.03</div>
                             </div>
 
                         </div>
-                        <div class="mb-4 text-xs text-slate-500">Dollar$</div>
+                        <div id="unitySelect2" class="mb-4 text-xs text-slate-500">CFA Franc</div>
 
                     </div>
                 </div>
@@ -87,14 +111,11 @@
 
             </div>
         </section>
-
         <!-- End of the converter -->
 
 
         <!-- Beginning of the calculator -->
-        <!-- class="bg-white h-[550px] relative border top-0 right-0 ease-in duration-500 rounded-lg"> -->
-        <section id="calculator"
-            class="bg-white h-[550px] relative border top-0 right-[-100%] ease-in duration-500 rounded-lg">
+        <section id="calculator" class="bg-white h-[550px] relative top-0 right-0 ease-in duration-500 rounded-lg">
 
             <div class="px-2 pt-2">
                 <div id="iconBack" class="inline cursor-pointer select-none">
@@ -137,9 +158,12 @@
         </section>
         <!-- End of the calculator -->
     </main>
+
+    <script src="js/parallaxEffect.js"></script>
+    <script type="module" src="js/createListCountries.js"></script>
     <script src="js/calculator.js"></script>
     <!-- <script src="js/convert.js"></script> -->
-    <script src="js/parallaxEffect.js"></script>
+
 </body>
 
 </html>

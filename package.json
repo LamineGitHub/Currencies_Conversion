@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "npx tailwindcss -i ./css/style.css -o ./dist/style.css --watch",
-    "build": "npx tailwindcss -i ./css/style.css -o ./dist/style.css --minify"
+    "build": "npx tailwindcss -i ./css/style.css -o ./dist/style.min.css --minify"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
