@@ -47,6 +47,7 @@ function addOperator(operateur) {
  * Il efface l'écran.
  */
 function clear() {
+  screen.classList.remove("text-red-600")
   screen.innerText = ""
 }
 
@@ -55,6 +56,7 @@ function clear() {
  * de la chaîne
  */
 function clearLastNumber() {
+  screen.classList.remove("text-red-600")
   screen.innerText = screen.innerText.toString().slice(0, -1)
 }
 
@@ -96,6 +98,7 @@ function calculate() {
       const resultat = eval(expression)
       screen.innerText = resultat
     } catch (error) {
+      screen.classList.add("text-red-600")
       screen.innerText = "ERREUR SYNTAX"
     }
   }
