@@ -20,7 +20,6 @@ selectCountryTo.addEventListener("click", () => {
   selectFromOrTo = false
 })
 
-
 /**
  * Il crée une liste de pays
  * @param {Object[]} countries - un tableau d'objets, chaque objet représentant un pays.
@@ -40,7 +39,7 @@ const createListCountry = (countries) => {
 
     name.textContent = country.name
     // name.innerText += country.symbol_native
-    name.classList.add("inline-block", "w-[234px]")
+    name.classList.add("inline-block", "w-[240px]")
 
     code.textContent = country.code
     code.classList.add("inline-block", "w-11")
@@ -67,7 +66,8 @@ const createListCountry = (countries) => {
   })
 
   ul.append(...countryListItems)
-  ul.lastChild.classList.remove("border-b")
+  // ul.lastChild.classList.remove("border-b")
+  ul.lastChild.classList.add("mb-16")
 
   divList.appendChild(ul)
 }

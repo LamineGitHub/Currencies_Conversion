@@ -25,7 +25,9 @@
     display: inline;
   }
 
-  #ecran1 {
+  #ecran1,
+  #ecran2,
+  #ecran3 {
     word-wrap: break-word;
     word-break: break-all;
     /* font-size: 26px; */
@@ -35,15 +37,25 @@
     box-shadow: -10px 5px 34px -4px rgba(0, 0, 0, 0.336);
   }
 
-  #ecran2 {
-    height: 210px;
-    word-wrap: break-word;
-    word-break: break-all;
-    /* font-size: 26px; */
+  #listCountry::before {
+    content: "";
+    display: block;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+
+    width: 315px;
+    height: 10%;
+    position: sticky;
+    top: 567px;
+    background: linear-gradient(
+      0deg,
+      rgb(255 255 255) 0%,
+      rgba(0, 0, 0, 0) 130%
+    );
   }
 
   #listCountry::-webkit-scrollbar {
-    width: 6px;
+    width: 7px;
   }
 
   #listCountry::-webkit-scrollbar-track {
@@ -61,6 +73,10 @@
   }
 }
 
+.flex-it-center {
+  @apply flex items-center;
+}
+
 .btn-signe {
   @apply font-semibold text-primary;
 }
@@ -69,8 +85,12 @@
   @apply duration-200 rounded-full focus:outline-none focus:ring-1 focus:ring-primary focus:ring-offset-2 focus:ring-opacity-50 hover:bg-primaryHover;
 }
 
+.btn-submit {
+  @apply text-white rounded-lg bg-primary focus:outline-none focus:ring focus:ring-green-500 focus:ring-offset-0 focus:ring-opacity-50;
+}
+
 .countrySelectClass {
-  @apply flex items-center justify-around w-20 p-1 text-left transition-colors border-2 rounded-md cursor-pointer focus-visible:outline-primary hover:border-primary shrink-0;
+  @apply flex items-center justify-around w-20 p-1 text-left transition-all border rounded-md shadow-md cursor-pointer focus-visible:outline-primary hover:border-primary shrink-0 hover:shadow-lg;
 }
 
 .liStyle {

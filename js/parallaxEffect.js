@@ -19,6 +19,7 @@ const toggleSection = (section, hideClass, showClass, delay) => {
   setTimeout(() => {
     section.classList.add(showClass)
     section.classList.remove(hideClass)
+    convertSection.classList.toggle("opacity-10")
     convertSection.classList.toggle("-translate-x-6")
   }, delay)
 }
