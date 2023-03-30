@@ -176,6 +176,7 @@ function listItem(countries) {
 
         UpdateCountrySelect(code, selectedToId)
       }
+      getExchangeRate()
     })
   })
 }

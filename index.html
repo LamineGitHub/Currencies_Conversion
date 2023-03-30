@@ -6,9 +6,9 @@
     <link rel="icon" type="image/x-icon" href="img/icon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="dist/style.css" rel="stylesheet" />
-    <!--     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>Currency Conversion Calculator</title>
 </head>
 
@@ -62,8 +62,8 @@
                         <!-- <div id="ecran2" class="pt-10 text-lg text-right border-none w-[310px]"> -->
 
                         <div id="ecran3"
-                            class="justify-end w-full h-12 p-2 border rounded-lg shadow flex-it-center mb-9">
-                            123456789
+                            class="justify-start overflow-hidden w-full h-12 p-2 text-slate-400 border rounded-lg shadow flex-it-center mb-9">
+                            Enter Amount
                         </div>
 
                         <div class="justify-between flex-it-center">
@@ -73,9 +73,7 @@
                                 <img src="./img/bottomArrow.svg" width="20px" alt="">
                             </a>
 
-                            <div id="priceFrom" class="text-base text-right">
-                                123456789012.12
-                            </div>
+                            <div id="priceFrom" class="text-base text-right">1</div>
 
                         </div>
                         <div id="unitySelect1" class="mb-3 text-xs text-slate-500">US Dollar $</div>
@@ -87,9 +85,7 @@
                                 <img src="./img/bottomArrow.svg" width="20px" alt="">
                             </a>
 
-                            <div id="priceTo" class="text-base text-right">
-                                255 808 348 910 233.03
-                            </div>
+                            <div id="priceTo" class="text-base text-right"></div>
 
                         </div>
                         <div id="unitySelect2" class="text-xs text-slate-500">CFA Franc BCEAO CFA</div>
@@ -97,8 +93,9 @@
                     </div>
                 </div>
                 <div class="justify-center mt-10 mb-3 flex-it-center">
-                    <button class="w-3/5 p-2 transition-all shadow btn-submit hover:shadow-lg hover:tracking-widest">
-                        Echanger
+                    <button id="convertBtn"
+                        class="w-3/5 p-2 transition-all shadow btn-submit hover:shadow-lg hover:tracking-widest">
+                        Convert
                     </button>
                 </div>
 
@@ -176,7 +173,7 @@
 
     <script src="js/parallaxEffect.js"></script>
     <script type="module" src="js/createListCountries.js"></script>
-    <!-- <script src="js/convert.js"></script> -->
+    <script src="js/convert.js"></script>
     <script src="js/calculator.js"></script>
 
 </body>
