@@ -587,13 +587,8 @@ select {
 
 body {
   font-family: "Poppins", sans-serif;
-  /* background: url("../img/gradient7.jpg") no-repeat; */
-  /* background: url("../img/gradient13.jpg") no-repeat; */
-  /* background: url("../img/gradient14.jpg") no-repeat; */
-  /* background: url("../img/gradient_11.jpg") no-repeat; */
-  /* background: url("../img/gradient_22.jpg") no-repeat; */
-  /* background: url("../img/gradient_44.jpg") no-repeat; */
-  /* background-size: cover; */
+  background: url("../img/gradient_bg.jpg") no-repeat;
+  background-size: cover;
 }
 
 img {
