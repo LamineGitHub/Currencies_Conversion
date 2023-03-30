@@ -2,21 +2,21 @@ import { countries } from "./currencies.js"
 
 const divList = document.getElementById("country")
 const search = document.getElementById("search")
-const selectCountryFrom = document.getElementById("selectCountryFrom")
-const selectCountryTo = document.getElementById("selectCountryTo")
+const selectFrom = document.getElementById("selectCountryFrom")
+const selectTo = document.getElementById("selectCountryTo")
 
-const codeFrom = selectCountryFrom.firstElementChild
-const codeTo = selectCountryTo.firstElementChild
+const codeFrom = selectFrom.firstElementChild
+const codeTo = selectTo.firstElementChild
 const selectedFromId = "selectedFrom"
 const selectedToId = "selectedTo"
 
 // let selectFromOrTo = true
 let selectFromOrTo = { from: true, to: false }
 
-selectCountryFrom.addEventListener("click", () => {
+selectFrom.addEventListener("click", () => {
   selectFromOrTo = true
 })
-selectCountryTo.addEventListener("click", () => {
+selectTo.addEventListener("click", () => {
   selectFromOrTo = false
 })
 
