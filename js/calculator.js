@@ -1,8 +1,9 @@
 const screen = document.getElementById("ecran1")
+const calculator = document.getElementById("calculator")
 const button = document.querySelectorAll("#calculator button")
 
 /* Ajout d'un écouteur d'événement au document pour chaque touche pressé. */
-document.addEventListener("keydown", updateTouche)
+calculator.addEventListener("keydown", updateTouche)
 
 /* Ajout d'un écouteur d'événement à chaque bouton. */
 button.forEach((button) => {
@@ -19,6 +20,11 @@ let equals = false,
 function addOperator(operateur) {
   let expression = screen.innerText.trim()
   let lastChar = expression[expression.length - 1]
+
+  if (expression === "ERREUR SYNTAX") {
+    clear()
+    return
+  }
 
   if (lastChar) {
     // si le dernier caractère n'est pas un nombre, remplacer l'opérateur existant
@@ -47,7 +53,9 @@ function addOperator(operateur) {
  * Il efface l'écran.
  */
 function clear() {
-  screen.classList.remove("text-red-600")
+  if (screen.innerText === "ERREUR SYNTAX")
+    screen.classList.remove("text-red-600")
+
   screen.innerText = ""
 }
 
@@ -56,7 +64,9 @@ function clear() {
  * de la chaîne
  */
 function clearLastNumber() {
-  screen.classList.remove("text-red-600")
+  if (screen.innerText === "ERREUR SYNTAX")
+    screen.classList.remove("text-red-600")
+
   screen.innerText = screen.innerText.toString().slice(0, -1)
 }
 
