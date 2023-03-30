@@ -29,6 +29,10 @@ buttonConvert.forEach((button) => {
  * @returns une chaîne avec le nombre séparé par des espaces tous les trois chiffres.
  */
 function separateThousands(numberString) {
+/* Vérifier si le nombre est un nombre. Si ce n'est pas un nombre, il le convertit en chaîne. */
+  if (typeof number !== 'number') {
+     numberString = numberString.toString();
+  }
   // Séparer la partie entière de la partie décimale
   const [integerPart, decimalPart] = numberString.split(".")
 
@@ -153,7 +157,7 @@ function getExchangeRate() {
   convertBtn.classList.remove("hover:tracking-widest", "hover:shadow-lg")
 
   // Affiche la valeur à convertir dans l'interface
-  priceFrom.innerText = amountVal
+  priceFrom.innerText = separateThousands(amountVal)
   priceTo.innerText = "Getting exchange rate . . ."
 
   // Récupère le taux de change à partir d'une API
@@ -164,7 +168,7 @@ function getExchangeRate() {
       let exchangeRate = result.conversion_rates[codeToConverte]
 
       // Affiche la valeur convertie dans l'interface
-      priceTo.innerText = (amountVal * exchangeRate).toFixed(2)
+      priceTo.innerText = separateThousands((amountVal * exchangeRate).toFixed(2))
 
       // let exchangeRate = result.conversion_rates[codeToConverte]
       // let totalExRate = (amountVal * exchangeRate).toFixed(2)
