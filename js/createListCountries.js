@@ -10,8 +10,8 @@ const codeTo = selectTo.firstElementChild
 const selectedFromId = "selectedFrom"
 const selectedToId = "selectedTo"
 
-// let selectFromOrTo = true
-let selectFromOrTo = { from: true, to: false }
+let selectFromOrTo = true
+// let selectFromOrTo = { from: true, to: false }
 
 selectFrom.addEventListener("click", () => {
   selectFromOrTo = true
@@ -55,6 +55,7 @@ const createListCountry = (countries) => {
 
       li.appendChild(selected)
     }
+
     if (codeTo.textContent === country.code) {
       const selected = document.createElement("span")
       selected.innerHTML = /* html */ `<img src="./img/coche.svg" class="mb-1" width="20px">`
@@ -84,6 +85,7 @@ search.addEventListener("keyup", (e) => {
 
   /* Affichage d'un message lorsque aucun pays n'est trouvé. */
   const errorMessage = document.getElementById("notFoundMsg")
+
   if (filteredCountries.length === 0 && searchValue.length > 0) {
     errorMessage.classList.remove("hidden")
   } else {
@@ -116,6 +118,7 @@ const UpdateCountrySelect = (countrySelected, selectedId) => {
   if (countrySelected && selectedId) {
     const selected = document.createElement("span")
     selected.setAttribute("id", selectedId)
+
     selected.innerHTML =
       /* html */
       `<img src="./img/coche.svg" class="mb-1" width="20px">`
@@ -176,6 +179,7 @@ function listItem(countries) {
 
         UpdateCountrySelect(code, selectedToId)
       }
+
       getExchangeRate()
     })
   })
