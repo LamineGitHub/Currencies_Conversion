@@ -15,7 +15,7 @@
     <title>Currency Conversion Calculator</title>
 </head>
 
-<body class="flex-it-center justify-center bg-slate-300 h-[100vh]">
+<body class="flex-center bg-slate-300 h-[100dvh]">
 
     <!-- <main class="flex w-[325px] rounded-lg shadow-2xl"> -->
     <main class="flex w-[325px] overflow-hidden rounded-lg shadow-2xl">
@@ -52,9 +52,10 @@
         <!-- Beginning of the converter -->
         <section class="fixed overflow-hidden rounded-lg">
             <div class="hidden" id="convertPage"></div>
-            <div id="convert" class="bg-white h-[630px] rounded-lg ease-out duration-1000">
 
+            <div id="convert" class="bg-white h-[630px] rounded-lg ease-out duration-1000">
                 <div class="px-2 pt-2 text-right">
+
                     <a href="#calcPage" id="iconCalculator"
                         class="inline cursor-pointer select-none focus-visible:outline-primary">
                         <img src="./img/calculator.svg" width="25px" alt="" />
@@ -64,39 +65,37 @@
                         <!-- <div id="ecran2" class="pt-10 text-lg text-right border-none w-[310px]"> -->
 
                         <div id="ecran3"
-                            class="justify-start overflow-hidden w-full h-12 p-2 text-slate-400 border rounded-lg shadow flex-it-center mb-9">
+                            class="flex-start overflow-hidden w-full h-12 p-2 text-slate-400 border rounded-lg shadow mb-9">
                             Enter Amount
                         </div>
 
-                        <div class="justify-between flex-it-center">
-
-                            <a href="#ListCoutryPage" id="selectCountryFrom" class=" countrySelectClass">
+                        <div class="flex-between">
+                            <a href="#ListCoutryPage" id="selectCountryFrom" class="countrySelectClass">
                                 <div id="codeFrom">USD</div>
                                 <img src="./img/bottomArrow.svg" width="20px" alt="">
                             </a>
 
                             <div id="priceFrom" class="text-base text-right">1</div>
-
                         </div>
+
                         <div id="unitySelect1" class="mb-3 text-xs text-slate-500">US Dollar $</div>
 
-                        <div class="justify-between pt-4 border-t flex-it-center">
-
+                        <div class="flex-between pt-4 border-t">
                             <a href="#ListCoutryPage" id="selectCountryTo" class="countrySelectClass">
                                 <div id="codeTo">XOF</div>
                                 <img src="./img/bottomArrow.svg" width="20px" alt="">
                             </a>
 
                             <div id="priceTo" class="text-base text-right"></div>
-
                         </div>
-                        <div id="unitySelect2" class="text-xs text-slate-500">CFA Franc BCEAO CFA</div>
 
+                        <div id="unitySelect2" class="text-xs text-slate-500">CFA Franc BCEAO CFA</div>
                     </div>
                 </div>
-                <div class="justify-center mt-10 mb-3 flex-it-center">
+
+                <div class="mt-10 mb-3 flex-center">
                     <button id="convertBtn"
-                        class="w-3/5 p-2 transition-all shadow btn-submit hover:shadow-lg hover:tracking-widest">
+                        class="w-full mx-7 p-2 transition-all shadow btn-submit hover:shadow-lg hover:tracking-widest">
                         Convert
                     </button>
                 </div>
@@ -119,9 +118,7 @@
                         <button class="btn-ring">0</button>
                         <button class="btn-ring">00</button>
                     </div>
-
                 </div>
-
             </div>
         </section>
         <!-- End of the converter -->
@@ -166,9 +163,7 @@
                     <button class="btn-ring">0</button>
                     <button class="btn-ring">00</button>
                 </div>
-
             </div>
-
         </section>
         <!-- End of the calculator -->
     </main>
