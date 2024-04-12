@@ -1,6 +1,6 @@
 # Currency Converter and Calculator
 
-![Design preview for Curencies Conversion Calculator](img/Preview-photo-app.jpg)
+![Design preview for Curencies Conversion Calculator](img/Preview-photo-app.png)
 
 Brief Project Description: The project is a web application that allows users to convert currencies and perform basic mathematical calculations. The main function of the application is currency conversion, but it also includes a calculator for simple math operations. The project uses the TailwindCSS framework for its design.
 
