@@ -161,8 +161,7 @@ function getExchangeRate() {
   priceTo.innerText = "Getting exchange rate . . ."
 
   // Récupère le taux de change à partir d'une API
-  // const url = `https://v6.exchangerate-api.com/v6/650d75f53f2810edfb265f21/latest/${codeFromConverte}`
-  const url = './js/API.json'
+  const url = `https://v6.exchangerate-api.com/v6/650d75f53f2810edfb265f21/latest/${codeFromConverte}`
   fetch(url)
     .then((response) => response.json())
     .then((result) => {
